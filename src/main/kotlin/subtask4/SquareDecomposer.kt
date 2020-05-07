@@ -2,13 +2,13 @@ package subtask4
 
 class SquareDecomposer {
 
-    fun decomposeNumber(number: Int): IntArray? {
+    fun decomposeNumber(number: Int): Array<Int>? {
 
         val tempArray = decomposer(number , number * number)
 
         if(tempArray.isEmpty()) return null
         tempArray.removeAt(tempArray.size - 1)
-        return tempArray.toIntArray()
+        return tempArray.toTypedArray()
     }
 
     private fun decomposer(number: Int, remain: Int): MutableList<Int>{
